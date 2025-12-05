@@ -1,0 +1,27 @@
+# Ignore Additional folder
+Additional/
+
+# Ignore node_modules in all services
+node_modules/
+*/node_modules/
+*/*/node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build directories
+target/
+dist/
+build/
+
+# Dependencies
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
