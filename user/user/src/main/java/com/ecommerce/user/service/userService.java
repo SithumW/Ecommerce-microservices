@@ -59,7 +59,7 @@ public class userService {
 
 
 
-    public Optional<UserResponse> getOneUser(Long id){
+    public Optional<UserResponse> getOneUser(String id){
 
         return userRepository.findById(id)
                 .map(this::mapToUserResponse);
@@ -68,7 +68,7 @@ public class userService {
 
 
 
-    public boolean updateUser(Long id, UserRequest UpdateduserRequest){
+    public boolean updateUser(String id, UserRequest UpdateduserRequest){
             //get the id, userUpdated
 
         return userRepository.findById(id) //returns an optional
@@ -114,7 +114,7 @@ public class userService {
     //Instead of using mapToUserRequest, this way help to update
     private  void updateUserFromRequest(User user, UserRequest userRequest){
 
-        //user.setId(Long.valueOf(userRequest.getId())); no need to set the id, will automatically added in the repository.
+        //user.setId(Long.valueOf(userRequest.getId())); no need to set the id, will automatically add in the repository.
         user.setFirstName(userRequest.getFirstName());
         user.setLastName(userRequest.getLastName());
         user.setEmail(userRequest.getEmail());

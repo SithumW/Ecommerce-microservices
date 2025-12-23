@@ -64,7 +64,7 @@ public class UserController {
 
     //Update user
     @PutMapping("/{id}")
-    public ResponseEntity<String> updateUser(@PathVariable Long id , @RequestBody UserRequest UpdateduserRequest) {
+    public ResponseEntity<String> updateUser(@PathVariable String id , @RequestBody UserRequest UpdateduserRequest) {
 
 
         boolean res = userService.updateUser(id, UpdateduserRequest);
@@ -80,7 +80,7 @@ public class UserController {
 
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserResponse> getUser(@PathVariable Long id){ //taking id query parameter
+    public ResponseEntity<UserResponse> getUser(@PathVariable String id){ //taking id query parameter
 
         //Handle the optional
         return userService.getOneUser(id)

@@ -1,18 +1,15 @@
 package com.ecommerce.user.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+//Address is already a part of the user document
+//No need to make this a seperate document
 @Data
-@Entity(name = "user_address") //table name
-@NoArgsConstructor
 public class Address {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private String street;
     private String city;
