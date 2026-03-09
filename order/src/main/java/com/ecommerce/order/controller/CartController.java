@@ -5,6 +5,7 @@ import com.ecommerce.order.dto.CartItemRequest;
 import com.ecommerce.order.dto.CartItemResponse;
 import com.ecommerce.order.service.cartService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,6 @@ import java.util.WeakHashMap;
 public class CartController {
 
     private final cartService cartService;
-
 
 
 
